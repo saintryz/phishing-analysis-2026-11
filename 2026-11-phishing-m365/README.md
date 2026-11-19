@@ -43,7 +43,7 @@ On 18 November 2026 at 15:28 UTC, a staff member at an organisation received an 
   - Manual visit in an updated Brave private window over a VPN, with DevTools Network recording (exported as a HAR file, SHA-256 `acea14568cdecfe577e87937cc20a79ed970ee833cdc1d4f058d1e800dc10370`).
   - Only invented credentials were entered: `analyst.test@example.com` (a reserved domain that belongs to no one) and a made-up password.
   - A virtual machine was not used. In hindsight this helped: the site's gate script checks for software-rendered graphics, a common sign of a VM or sandbox, and might have blocked one.
-- **AI assistance:** Claude (Anthropic) was used to speed up the analysis: reading the headers and authentication results, parsing the HAR capture and the gate script, building the IOC files and ATT&CK mapping, and drafting this report. Only redacted extracts of the evidence were shared with it, never the original `.eml` or HAR. Every finding was checked by the analyst against the original evidence, and the conclusions are the analyst's own.
+- **AI assistance:** the analyst directed the investigation and made the findings. Claude (Anthropic) was used as a tool, under the analyst's direction, to speed up parsing the headers, the HAR capture and the gate script, building the IOC files, and writing up the report. Only redacted extracts of the evidence were shared with it, never the original `.eml` or HAR.
 - **Boundaries:** observation only. No real credentials were used, and no attacker endpoint was probed, scanned or reused beyond the normal page flow.
 
 ### Limitations
