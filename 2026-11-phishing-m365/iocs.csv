@@ -1,0 +1,7 @@
+type,value,description,action,first_seen_utc
+domain,coursesly.vu,"Phishing kit domain (fake DocuSign login, anti-analysis gates). Registered 2026-10-09 via Global Domain Group LLC; behind Cloudflare.",block,2026-11-18T15:28:05.000Z
+url,https://coursesly.vu/page,Entry point; redirects to a per-visitor random path,block,2026-11-18T15:28:05.000Z
+url,https://coursesly.vu/page/,"Credential exfiltration endpoint (POST, JSON: email, password, attempt, send, action)",block,2026-11-18T15:28:05.000Z
+url-regex,^https?://coursesly\.vu/[0-9a-f]{12}$,Per-visitor gate path pattern,block,2026-11-18T15:28:05.000Z
+email-subject-regex,Has Shared You A Document\s*$,Lure subject: '<Name> Has Shared You A Document',alert,2026-11-18T15:28:05.000Z
+domain,links.notification.intuit.com,LEGITIMATE Intuit click-tracking redirector abused to hide the phishing URL. Do NOT block; report specific links to Intuit.,context-only,2026-11-18T15:28:05.000Z
